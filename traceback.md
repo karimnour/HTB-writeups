@@ -57,7 +57,7 @@ to generate ssh keys
 i used  **`ssh-keygen`** tool on linux 
 ![sshgenerat](https://user-images.githubusercontent.com/36403473/81320041-da470800-9090-11ea-93d7-6956bc5bfdc0.png)
 and uplad an autherized key on the server 
-### 2-ssh 
+### 2-user access 
 
 so now lets try to login to server:
 **`ssh-i id_rsa webadmin@10.10.10.181`**
@@ -81,13 +81,12 @@ checking files `ls -al `
 ![acces_system_admin](https://user-images.githubusercontent.com/36403473/81357137-287cfb00-90d3-11ea-874e-160c7a63cca7.png)
 
 now i have user access `user.txt`
-
-the last step is to get root access so i searched all files i didnt get any thing 
-so i use **`ps -aus`** commmnd  to provide information about the currently running processes .
-i notice this directory **` /etc/update-motd.d/`**
+### 3-root access
+lets try to get root access, so i searched all files i didnt get any thing. 
+after googling much time to get root access i use **`ps -aux`** commmnd  to provide information about the currently running processes.
+i notice that there was an operation happened in this directory**` /etc/update-motd.d/`**
 going to this directory ckeck all details **`ls -al`**
 ![not2root](https://user-images.githubusercontent.com/36403473/81357368-ba850380-90d3-11ea-9e74-9ceedefe51cc.png)
 
-to get root access 
 
 
