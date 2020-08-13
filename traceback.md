@@ -7,8 +7,6 @@
 
 
 
-
-
 ### It was an easy machine from *Hack The Box*
 
 ## `Enumeration`
@@ -59,12 +57,10 @@ to generate ssh keys
 i used  **`ssh-keygen`** tool on linux 
 ![sshgenerat](https://user-images.githubusercontent.com/36403473/81320041-da470800-9090-11ea-93d7-6956bc5bfdc0.png)
 and uplad an autherized key on the server 
+### 2-ssh 
 
 so now lets try to login to server:
 **`ssh-i id_rsa webadmin@10.10.10.181`**
-
-![serverlogin](https://user-images.githubusercontent.com/36403473/81354095-1303d300-90cb-11ea-8390-6c0b34e6e995.png)
-
 
 ![echo_note](https://user-images.githubusercontent.com/36403473/81354623-61fe3800-90cc-11ea-8ccc-92a912176868.png)
 two files was the solution to take user acess **note.txt** & **bash-history**
