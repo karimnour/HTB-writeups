@@ -1,9 +1,43 @@
+## Hack The Box - Tracback
+
+### This is my writeup and walkthrough for Traceback from Hack The Box.
+
+
+![main](https://user-images.githubusercontent.com/36403473/90196696-cd8f2a00-ddcc-11ea-9f4f-5c0f9ca9ba3d.jpg)
+
+
+
+
+
 ### It was an easy machine from *Hack The Box*
 
-first thing lets use **nmap** to check ip 10.10.10.181
-`nmap -sC -sV 10.10.10.181` 
+## `Enumeration`
 
-![nmap](https://user-images.githubusercontent.com/36403473/81315494-a9fc6b00-908a-11ea-9d23-782adf27af6a.png)
+#### 1-Nmap 
+  `nmap -sC -sV 10.10.10.181`
+
+``` 
+nmap -sC -sV 10.10.10.181
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-08-14 01:20 EET
+Nmap scan report for 10.10.10.181
+Host is up (0.41s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 96:25:51:8e:6c:83:07:48:ce:11:4b:1f:e5:6d:8a:28 (RSA)
+|   256 54:bd:46:71:14:bd:b2:42:a1:b6:b0:2d:94:14:3b:0d (ECDSA)
+|_  256 4d:c3:f8:52:b8:85:ec:9c:3e:4d:57:2c:4a:82:fd:86 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| 103K  2020-02-27 05:37  smevk.php
+|_
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Index of /
+Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+```
 I found http on port 80 and ssh on port 22.
 use should have password to conncet server so lets see http 
 i opend source code i found this comment 
@@ -57,5 +91,7 @@ so i use **`ps -aus`** commmnd  to provide information about the currently runni
 i notice this directory **` /etc/update-motd.d/`**
 going to this directory ckeck all details **`ls -al`**
 ![not2root](https://user-images.githubusercontent.com/36403473/81357368-ba850380-90d3-11ea-9e74-9ceedefe51cc.png)
+
+to get root access 
 
 
