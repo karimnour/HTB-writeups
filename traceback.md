@@ -87,7 +87,9 @@ after googling much time to get root access i use **`ps -aux`** commmnd  to prov
 i notice that there was an operation happened in this directory **`/etc/update-motd.d/`**
 going to this directory ckeck all details **`ls -al`**
 ![not2root](https://user-images.githubusercontent.com/36403473/81357368-ba850380-90d3-11ea-9e74-9ceedefe51cc.png)
-after googling i discovred that i should check 00-header file according to this   [/etc/update-motd.d/00-header is broken](https://bugs.launchpad.net/ubuntu/+source/base-files/+bug/510599) 
-echo "cat root/root.txt " >> 00-header
+after googling i discovred bug in  The file `/etc/update-motd.d/00-header` according to this   [/etc/update-motd.d/00-header is broken](https://bugs.launchpad.net/ubuntu/+source/base-files/+bug/510599).
+
+so lets
+`echo "cat root/root.txt " >> 00-header`
 then login again to server serialsry i try many time to login 
 at the end the root flag printed on the welcome screen 
