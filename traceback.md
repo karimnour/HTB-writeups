@@ -56,7 +56,7 @@ i could to upload ssh autherizeed key
 to generate ssh keys  
 i used  **`ssh-keygen`** tool on linux 
 ![sshgenerat](https://user-images.githubusercontent.com/36403473/81320041-da470800-9090-11ea-93d7-6956bc5bfdc0.png)
-and uplad an autherized key on the server 
+
 ### 2-user access 
 
 so now lets try to login to server:
