@@ -91,5 +91,5 @@ after googling i discovred bug in  The file `/etc/update-motd.d/00-header` accor
 
 so lets
 `echo "cat root/root.txt " >> 00-header`
-then login again to server serialsry i try many time to login 
+then login again to server i try many time to login 
 at the end the root flag printed on the welcome screen 
